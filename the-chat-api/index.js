@@ -11,8 +11,8 @@ const io = require('socket.io')(server)
 const webpush = require('web-push');
 require('dotenv').config()
 
-const publicVapidKey = process.env.THE_CHAT_PUBLIC_KEY_WEBPUSH;
-const privateVapidKey = process.env.THE_CHAT_PRIVATE_KEY;
+const publicVapidKey = process.env.PUBLIC_KEY_WEBPUSH;
+const privateVapidKey = process.env.PRIVATE_KEY;
 webpush.setVapidDetails('mailto: pedrolopeshls99@gmail.com', publicVapidKey, privateVapidKey)
 
 app.use(bodyparser.json())
@@ -23,9 +23,9 @@ app.use(fileUpload({
 }));
 
 cloudinary.config({
-    cloud_name:process.env.THE_CHAT_CLOUDINARY_NAME,
-    api_key:process.env.THE_CHAT_CLOUDINARY_API_KEY,
-    api_secret:process.env.THE_CHAT_CLOUDINARY_API_SECRET
+    cloud_name:process.env.CLOUDINARY_NAME,
+    api_key:process.env.CLOUDINARY_API_KEY,
+    api_secret:process.env.CLOUDINARY_API_SECRET
 })
 
 io.on('connection', socket => {

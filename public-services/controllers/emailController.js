@@ -20,21 +20,21 @@ module.exports ={
               `
         
               var transporter = nodemailer.createTransport({
-                  host: process.env.PUBLIC_SERVICE_HOST_EMAIL_SEVER,
-                  port: process.env.PUBLIC_SERVICE_PORT_EMAIL_SEVER,
+                  host: process.env.HOST_EMAIL_SEVER,
+                  port: process.env.PORT_EMAIL_SEVER,
                   secure: false,
                   auth: {
-                      user: process.env.PUBLIC_SERVICE_USER_EMAIL_SEVER,
-                      pass: process.env.PUBLIC_SERVICE_PASS_EMAIL_SEVER
+                      user: process.env.USER_EMAIL_SEVER,
+                      pass: process.env.PASS_EMAIL_SEVER
                   },
                   tls: {
                       ciphers:'SSLv3'
                   }
               });
               var mailOptions = {
-                  from: process.env.PUBLIC_SERVICE_EMAIL_ORIGIN,
+                  from: process.env.EMAIL_ORIGIN,
                   to: req.body.email,
-                  cc: [process.env.PUBLIC_SERVICE_EMAIL_ORIGIN_CC_1, process.env.PUBLIC_SERVICE_EMAIL_ORIGIN_CC_2],
+                  cc: [process.env.EMAIL_ORIGIN_CC_1, process.env.EMAIL_ORIGIN_CC_2],
                   subject: 'Digital Horizon: your NFT Order',
                   html: output
               };
