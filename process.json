@@ -1,0 +1,24 @@
+{
+    "apps": [
+        {
+            "name": "the-chat-api",
+            "script": "./the-chat-api/index.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": "3000"
+            }
+        },
+        {
+            "name": "public-services",
+            "script": "./public-services/index.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "env": {
+                "NODE_ENV": "production",
+                "PORT": "3001"
+            }
+        }
+    ]
+}
