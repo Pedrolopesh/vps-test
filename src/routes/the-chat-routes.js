@@ -9,7 +9,7 @@ const authMiddleware = require('../the-chat-api/middlewares/auth');
 
 // STATUS SERVER
 router.get('/the-chat', (req, res) => {
-    res.send('Server is runing public-service')
+    res.send('Server is runing the chat')
     console.log('Server ok')
 });
 
