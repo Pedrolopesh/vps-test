@@ -240,7 +240,7 @@ module.exports = {
                     <a href="${generatedLink}" style="margin-top: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #ff6397; display: block;"> ${generatedLink} </a>
 
                     <p style="margin-top: 20px; text-align: start; font-weight: bold; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >Não pediu alteração ?</p>
-                    <p style="text-align: start; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Caso você não tenha solicitado a alteração de senha, <a href="mailto: ${process.env.NODEMAILER_EMAIL}" style="text-decoration: none; color: #ff6397; "> entre em contato conosco </a> </p>
+                    <p style="text-align: start; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Caso você não tenha solicitado a alteração de senha, <a href="mailto: ${process.env.THE_CHAT_NODEMAILER_EMAIL}" style="text-decoration: none; color: #ff6397; "> entre em contato conosco </a> </p>
 
                 </ul>
             </div>
@@ -248,20 +248,20 @@ module.exports = {
         `
 
         console.log({
-            user: process.env.NODEMAILER_EMAIL,
-            pass: process.env.NODEMAILER_PASSWORD,
+            user: process.env.THE_CHAT_NODEMAILER_EMAIL,
+            pass: process.env.THE_CHAT_NODEMAILER_PASSWORD,
         })
 
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.NODEMAILER_EMAIL,
-                pass: process.env.NODEMAILER_PASSWORD,
+                user: process.env.THE_CHAT_NODEMAILER_EMAIL,
+                pass: process.env.THE_CHAT_NODEMAILER_PASSWORD,
             }
         });
 
         var mailOptions = {
-            from: process.env.NODEMAILER_EMAIL,
+            from: process.env.THE_CHAT_NODEMAILER_EMAIL,
             to: req.body.email,
             subject: '[THE-CHAT-APP] Mensagem de contato',
             html: output
