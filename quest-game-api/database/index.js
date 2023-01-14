@@ -6,7 +6,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
-mongoose.connect(process.env.MONGOURL)
+mongoose.connect(process.env.QUEST_GAME_MONGOURL)
 .then( (doc)=> { console.log("Conected with database")  })
 .catch( (err) => { console.log(err) })
 
