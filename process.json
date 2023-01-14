@@ -11,23 +11,13 @@
             }
         },
         {
-            "name": "public-services",
-            "script": "./public-services/index.js",
-            "instances": 1,
-            "exec_mode": "fork",
-            "env": {
-                "NODE_ENV": "production",
-                "PORT": "3001"
-            }
-        },
-        {
             "name": "quest-game-api",
             "script": "./quest-game-api/index.js",
             "instances": 1,
             "exec_mode": "fork",
             "env": {
                 "NODE_ENV": "production",
-                "PORT": "3002"
+                "PORT": "3001"
             }
         }
     ]
