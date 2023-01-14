@@ -9,7 +9,7 @@ const authMiddleware = require('../middlewares/auth');
 
 // STATUS SERVER
 router.get('/', (req, res) => {
-    res.send('Server is runing')
+    res.send('Server is runing for the chat app')
     console.log('Server ok')
 });
 
