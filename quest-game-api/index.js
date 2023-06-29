@@ -8,7 +8,7 @@ const port = process.env.PORT || 3001
 app.use(bodyParser.json());
 app.use(cors())
 
-app.listen(port, console.log(`sever started at: http://localhost:${port}/api/`));
+app.listen(port,"127.0.0.1");
 
 // Routes
-app.use('/api', require('./routes/index'))
+app.use('/game/api', require('./routes/index'))

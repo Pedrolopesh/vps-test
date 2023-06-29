@@ -39,8 +39,6 @@ io.on('connection', socket => {
 
 app.use(cors());
 
-server.listen(port, () => {
-    console.log('Server started at port ' + `http://localhost:${port}/api/`)
-});
+server.listen(port,"127.0.0.1");
 
-app.use('/api', routes);
+app.use('/chat/api', routes);
