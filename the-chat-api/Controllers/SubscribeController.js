@@ -4,10 +4,10 @@ const Subscribe = require("../database/models/Subscribe");
 require('dotenv').config()
 
 
-const publicVapidKey = process.env.THE_CHAT_PUBLIC_KEY_WEBPUSH;
-const privateVapidKey = process.env.THE_CHAT_PRIVATE_KEY;
+// const publicVapidKey = process.env.THE_CHAT_PUBLIC_KEY_WEBPUSH;
+// const privateVapidKey = process.env.THE_CHAT_PRIVATE_KEY;
 
-webpush.setVapidDetails('mailto:test@code.co.uk', publicVapidKey || '', privateVapidKey || '' )
+// webpush.setVapidDetails('mailto:test@code.co.uk', publicVapidKey || '', privateVapidKey || '' )
 
 module.exports = {
     async subscribewebpush(req, res) {

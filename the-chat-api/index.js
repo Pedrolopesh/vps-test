@@ -8,12 +8,12 @@ const cors = require('cors');
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server)
-const webpush = require('web-push');
+// const webpush = require('web-push');
 require('dotenv').config()
 
-const publicVapidKey = process.env.THE_CHAT_PUBLIC_KEY_WEBPUSH;
-const privateVapidKey = process.env.THE_CHAT_PRIVATE_KEY;
-webpush.setVapidDetails('mailto: pedrolopeshls99@gmail.com', publicVapidKey, privateVapidKey)
+// const publicVapidKey = process.env.THE_CHAT_PUBLIC_KEY_WEBPUSH;
+// const privateVapidKey = process.env.THE_CHAT_PRIVATE_KEY;
+// webpush.setVapidDetails('mailto: pedrolopeshls99@gmail.com', publicVapidKey, privateVapidKey)
 
 app.use(bodyparser.json())
 
